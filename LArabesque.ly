@@ -27,23 +27,31 @@ global = {
 }
 
 primaryone = \relative g' {
-  a16( b16 c16 b16 a8-.) r8 | a16( b16 c16 d16 e8-.) r8 |
+  a16-1( b16 c16 b16 a8-.) r8 |
 }
 
-primarytwo = \relative g'' {
-  d16( e16 f16 g16 a8-.) r8 |
+primaryonenoslur = \relative g' {
+  a16-1 b16 c16 b16 a8-.) r8 |
 }
 
-primarythree = \relative g'' {
+primarytwo = \relative g' {
   a16( b16 c16 d16 e8-.) r8 |
 }
 
+primarythree = \relative g'' {
+  d16(-1 e16 f16 g16 a8-.) r8 |
+}
+
+primaryfour = \relative g'' {
+  a16-1( b16 c16 d16 e8-.) r8 |
+}
+
 secondaryonetwo = \relative g'' {
-  r8 e8-. e8( f8 d8-.) r8 d4~(-> d8 g8 d8 e8 
+  r8 e8-.-3 e8( f8 d8-.) r8 d4~(-> d8 g8 d8 e8 
 }
 
 secondarythree = \relative g' {
-  c8) r8 e4
+  c8) r8 e4(-5
 }
 
 aminor = \relative g { <a c e>4-. <a c e>4-. }
@@ -55,11 +63,11 @@ rh =  {
   \clef "treble"
   \relative g {
   R2*2
-  \primaryone \break
-  \primarytwo \primarythree
+  \primaryone \primarytwo \break
+  \primarythree \primaryfour
   \secondaryonetwo \break
-  \secondarythree \primaryone \primarytwo \break
-  \primarythree \secondaryonetwo c'4 c'8)-. r8
+  \secondarythree \primaryonenoslur \primarytwo \primarythree \break
+  \primaryfour \secondaryonetwo c'4 c'8)-. r8
 
     \bar "||"
   }
