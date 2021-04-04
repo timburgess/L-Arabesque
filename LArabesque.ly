@@ -54,6 +54,12 @@ secondarythree = \relative g' {
   c8) r8 e4(-5
 }
 
+bridge = \relative g' {
+  \clef "treble"
+  d16(-5 e16 f16 g16 a8) g8( | f8-1 e8 d8 cis8-2 | e8 d8 c8 b8) |
+  \clef "bass"
+}
+
 aminor = \relative g { <a c e>4-. <a c e>4-. }
 dminor = \relative g { <a d f>4-. <a d f>4-. }
 cmajor = \relative g { <g c e>4-. <g c e>4-. }
@@ -67,7 +73,12 @@ rh =  {
   \primarythree \primaryfour
   \secondaryonetwo \break
   \secondarythree \primaryonenoslur \primarytwo \primarythree \break
-  \primaryfour \secondaryonetwo c'4 c'8)-. r8
+  \primaryfour \secondaryonetwo c'4 c'8)-. r8 | \break
+  % measure 19
+  e,4.(-5 b8-2 | c4.) a8(-1 | e'4. b8 | c4.) a8( | \break
+  a'4.-> e8-2 | f4.)-3 e8( |
+  d8 c8-3 b8 a8 | gis4-2 e'4) | \break
+  \primaryone \primarytwo \primarythree \primaryfour
 
     \bar "||"
   }
@@ -80,7 +91,16 @@ lh =  {
   \cmajor \gseven \gseven
   <c e>8 r8 e4 |
   \aminor \aminor \dminor \aminor
-  \cmajor \gseven \gseven <c e>4. r8
+  \cmajor \gseven \gseven <c e>4. r8 |
+  gis16 a16 b16 a16 gis8 r8 |
+  a16 b16 c16 d16 e8 r8 |
+  gis,16 a16 b16 a16 gis8 r8 | %repeat
+  a16 b16 c16 d16 e8 r8 | %repeat
+  % measure 19
+  cis16-3 d16 e16 d16 cis8-. r8 |
+  \bridge
+  \aminor \aminor \dminor \aminor |
+
   }
 }
 
