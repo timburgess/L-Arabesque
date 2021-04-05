@@ -64,7 +64,7 @@ secondarythree = \relative g' {
 
 bridge = \relative g' {
   \clef "treble"
-  d16(-5 e16 f16 g16 a8) g8( | f8-1 e8 d8 cis8-2 | e8 d8 c8 b8) |
+  d16(-5 e16 f16 g16 a8) g8( | f8-1 e8 d8 dis8-2 | e8 d8 c8 b8) |
   \clef "bass"
 }
 
