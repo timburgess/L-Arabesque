@@ -26,6 +26,14 @@ global = {
   %\tempo 4 = 96
 }
 
+countin = {
+  \new DrumStaff {
+     \drummode {
+        cl4 cl cl cl |
+     }
+  }
+}
+
 primaryone = \relative g' {
   a16-1( b16 c16 b16 a8-.) r8 |
 }
@@ -104,7 +112,7 @@ lh =  {
   }
 }
 
-\score {
+piano = {
    \context PianoStaff \with { instrumentName = "Piano" } << 
       \context Staff = "rh" <<
         \global
@@ -115,7 +123,20 @@ lh =  {
         \lh
       >>
     >>
+}
+
+%PDF
+\score {
+  \piano
   \layout { }
-  \midi { }
+}
+
+% MIDI
+\score {
+   {
+     \countin
+     \piano
+   }
+   \midi { }
 }
 
